@@ -14,13 +14,15 @@
   "license": "Apache-2.0",
   "dependencies": {
     "cordova-android": "^8.0.0",
-    "cordova-ios": "^5.0.1",
-    "cordova-plugin-speechrecognition": "^1.2.0"
+    "cordova-ios": "^5.1.1",
+    "cordova-plugin-speechrecognition": "^1.2.0",
+    "cordova-plugin-wkwebview-engine": "^1.2.1"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-speechrecognition": {},
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-wkwebview-engine": {}
     },
     "platforms": [
       "ios",
