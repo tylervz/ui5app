@@ -7,13 +7,14 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
-    
+
     <!-- all platforms -->
     <preference name="Orientation" value="portrait" />
 
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
+    <allow-navigation href="*"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -60,4 +61,7 @@
         <icon height="87" src="res/icon/ios/icon-small@3x.png" width="87" />
 
     </platform>
+
+    <preference name="scheme" value="app" />
+    <preference name="hostname" value="localhost" />
 </widget>
