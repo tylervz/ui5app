@@ -23,28 +23,14 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <script type="text/javascript">
-            var app = {
-                initialize: function() { document.addEventListener('deviceready', this.onDeviceReady.bind(this), false); },
-                onDeviceReady: function() {
-                    // This is getting executed
-                    setInterval(function(){ console.log("Hello onDeviceReadyzzzzzz"); }, 3000);
-                    // Dynamically add a script tag to initialize the UI5 application as suggested here:
-                    // https://blogs.sap.com/2019/02/19/packaging-the-cordova-ui5-apps-with-cli-and-localcloud-hat/
-                    var oScript = document.createElement("script");
-                    oScript.text = "\
-                        sap.ui.getCore().attachInit(function() {\
-                            new sap.m.Shell({\
-                                app: new sap.ui.core.ComponentContainer({\
-                                    height : \"100%\",\
-                                    name : \"com.noki_online.ui5app\"\
-                                })\
-                            }).placeAt(\"content\");\
-                        });\
-                    ";
-                    document.head.appendChild(oScript);
-                }
-            };
-            app.initialize();
+            sap.ui.getCore().attachInit(function() {
+                new sap.m.Shell({
+                    app: new sap.ui.core.ComponentContainer({
+                        height : "100%",
+                        name : "com.noki_online.ui5app"
+                    })
+                }).placeAt("content");
+            });
         </script>
     </head>
 
